@@ -1,0 +1,49 @@
+// Copyright (c) 2023 Joseph Zupko <jazupko@jazupko.com>
+//
+// Unlicense: This is free and unencumbered software released into the
+// public domain.
+
+#include "toggle_mic_version.h"
+
+// Icon.
+IDI_PCLAUNCH ICON "toggle_mic.ico"
+IDI_SMALL    ICON "toggle_mic.ico"
+
+// Dependencies.
+#define APSTUDIO_READONLY_SYMBOLS
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include <Windows.h>
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#undef APSTUDIO_READONLY_SYMBOLS
+
+// Version info.
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION TOGGLE_MIC_VERSION_MAJOR,TOGGLE_MIC_VERSION_MINOR,TOGGLE_MIC_VERSION_PATCH
+PRODUCTVERSION TOGGLE_MIC_VERSION_MAJOR,TOGGLE_MIC_VERSION_MINOR,TOGGLE_MIC_VERSION_PATCH
+FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+#ifndef NDEBUG
+    FILEFLAGS VS_FF_DEBUG|VS_FF_PRERELEASE
+#else
+    FILEFLAGS 0x0L
+#endif
+FILEOS VOS__WINDOWS32
+FILESUBTYPE VFT2_UNKNOWN
+FILETYPE VFT_APP
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", "Joseph Zupko"
+            VALUE "FileDescription", "Toggle Mic"
+            VALUE "FileVersion", TOGGLE_MIC_VERSION_STR
+            VALUE "LegalCopyright", "© 2023 Joseph Zupko"
+            VALUE "ProductName", "Toggle Mic"
+            VALUE "ProductVersion", TOGGLE_MIC_VERSION_STR
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
